@@ -17,7 +17,7 @@ public class Prompt {
         return resposta;
     }
 
-    public void setResposta(){
+    public void setResposta(String resposta){
         this.resposta = resposta;
     }
 

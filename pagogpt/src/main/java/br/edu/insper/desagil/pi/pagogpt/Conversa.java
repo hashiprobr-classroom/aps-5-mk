@@ -21,8 +21,7 @@ public class Conversa {
     }
 
     public double calculaSubTotal(){
-        double soma = getSoma();
-        return soma;
+        return getSoma();
     }
 
     public double calculaSubMedia(){
@@ -30,8 +29,7 @@ public class Conversa {
             throw new IllegalStateException("Nenhum prompt!");
         }
         else {
-            double soma = getSoma();
-            return soma/prompts.size();
+            return getSoma()/prompts.size();
         }
     }
 
