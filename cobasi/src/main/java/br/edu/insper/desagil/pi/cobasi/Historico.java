@@ -63,6 +63,7 @@ public class Historico {
     private String getInfosBasicas(String summary) {
         summary += "Nascimento: " + dataNascimento.toString() + "\n";
         summary += "Peso: " + peso + "kg\n";
+
         return summary;
     }
 }
