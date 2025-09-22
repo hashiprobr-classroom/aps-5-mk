@@ -45,22 +45,24 @@ public class Historico {
     public String resumo() {
         String summary = "Animal:" + nome + "\n";
         if (tipo == 0) {
-            summary += "Nascimento: " + dataNascimento.toString() + "\n";
-            summary += "Peso: " + peso + "kg\n";
+            summary = getInfosBasicas(summary);
             summary += "Banho: " + extra + "\n";
         } else if (tipo == 1) {
-            summary += "Nascimento: " + dataNascimento.toString() + "\n";
-            summary += "Peso: " + peso + "kg\n";
+            summary = getInfosBasicas(summary);
             summary += "Doença: " + extra + "\n";
         } else if (tipo == 2) {
-            summary += "Nascimento: " + dataNascimento.toString() + "\n";
-            summary += "Peso: " + peso + "kg\n";
+            summary = getInfosBasicas(summary);
             summary += "Venenosa: " + Boolean.parseBoolean(extra) + "\n";
         } else if (tipo == 3) {
-            summary += "Nascimento: " + dataNascimento.toString() + "\n";
-            summary += "Peso: " + peso + "kg\n";
+            summary = getInfosBasicas(summary);
             summary += "Comida: " + Integer.parseInt(extra) + "\n";
         }
+        return summary;
+    }
+
+    private String getInfosBasicas(String summary) {
+        summary += "Nascimento: " + dataNascimento.toString() + "\n";
+        summary += "Peso: " + peso + "kg\n";
         return summary;
     }
 }
